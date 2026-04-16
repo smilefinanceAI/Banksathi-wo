@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator - Calculate Your Loan EMI Online | BankSathi</title>
+    <meta name="description" content="Free online EMI calculator. Calculate your personal loan, home loan, car loan EMI instantly. Know your monthly payment, total interest, and total payment.">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .calculator-main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .calculator-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .result-panel {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+        .emi-amount {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .slider-container {
+            margin-bottom: 25px;
+        }
+        .slider-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        input[type="range"] {
+            width: 100%;
+            margin: 10px 0;
+        }
+        .amount-value {
+            display: inline-block;
+            background: var(--light);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .calculator-main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="/" class="logo">🏦 BankSathi</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/personal-loan/">Personal Loan</a>
+                <a href="/home-loan/">Home Loan</a>
+                <a href="/calculators/">Calculators</a>
+            </div>
+            <a href="tel:9773747761" class="contact-btn">📞 Call Now</a>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="/">Home</a> > <a href="/calculators/">Calculators</a> > EMI Calculator
+    </div>
+
+    <div class="calculator-main">
+        <div class="calculator-panel">
+            <h2>📊 EMI Calculator</h2>
+            <p>Calculate your monthly EMI, total interest, and total payment</p>
+            
+            <div class="slider-container">
+                <label>💰 Loan Amount: <span id="amountValue">₹5,00,000</span></label>
+                <input type="range" id="loanAmount" min="10000" max="10000000" step="10000" value="500000">
+            </div>
+            
+            <div class="slider-container">
+                <label>📈 Interest Rate: <span id="rateValue">10.5%</span></label>
+                <input type="range" id="interestRate" min="5" max="20" step="0.1" value="10.5">
+            </div>
+            
+            <div class="slider-container">
+                <label>⏱️ Loan Tenure: <span id="tenureValue">5 Years</span></label>
+                <input type="range" id="loanTenure" min="1" max="30" step="1" value="5">
+            </div>
+            
+            <div class="slider-container">
+                <label>📅 Loan Type</label>
+                <select id="loanType" style="width: 100%; padding: 10px; border-radius: 10px;">
+                    <option value="personal">Personal Loan</option>
+                    <option value="home">Home Loan</option>
+                    <option value="car">Car Loan</option>
+                    <option value="business">Business Loan</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="result-panel">
+            <h3>Your Monthly EMI</h3>
+            <div class="emi-amount" id="emiAmount">₹10,762</div>
+            
+            <div style="margin-top: 30px;">
+                <p>💰 Total Interest Payable</p>
+                <h3 id="totalInterest">₹1,45,720</h3>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <p>💵 Total Amount Payable</p>
+                <h3 id="totalPayment">₹6,45,720</h3>
+            </div>
+            
+            <button onclick="redirectToBankSathi(document.getElementById('loanType').value)" style="margin-top: 30px; background: var(--accent); color: white; border: none; padding: 12px 30px; border-radius: 30px; cursor: pointer;">
+                Apply for Loan Now →
+            </button>
+        </div>
+    </div>
+    
+    <div class="subcategories" style="max-width: 1200px; margin: 0 auto;">
+        <h2 class="section-title">Other Calculators</h2>
+        <div class="subcategory-grid">
+            <a href="/calculators/loan-eligibility.html" class="subcategory-link">✅ Loan Eligibility Calculator</a>
+            <a href="/calculators/fd-calculator.html" class="subcategory-link">💰 FD Calculator</a>
+            <a href="/calculators/sip-calculator.html" class="subcategory-link">📈 SIP Calculator</a>
+            <a href="/calculators/cibil-score-calculator.html" class="subcategory-link">📉 CIBIL Score Calculator</a>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="/personal-loan/">Personal Loan</a>
+                <a href="/home-loan/">Home Loan</a>
+                <a href="/credit-card/">Credit Cards</a>
+                <a href="/demat-account/">Demat Account</a>
+            </div>
+            <div class="footer-col">
+                <h4>Calculators</h4>
+                <a href="/calculators/emi-calculator.html">EMI Calculator</a>
+                <a href="/calculators/loan-eligibility.html">Eligibility Calculator</a>
+                <a href="/calculators/fd-calculator.html">FD Calculator</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>📞 9773747761</p>
+                <p>📧 support@banksathi.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 BankSathi | Adviser Code: 110037218</p>
+        </div>
+    </footer>
+    
+    <script src="/js/main.js"></script>
+    <script>
+        const amountSlider = document.getElementById('loanAmount');
+        const rateSlider = document.getElementById('interestRate');
+        const tenureSlider = document.getElementById('loanTenure');
+        
+        function updateEMI() {
+            const amount = parseFloat(amountSlider.value);
+            const rate = parseFloat(rateSlider.value);
+            const tenure = parseFloat(tenureSlider.value);
+            
+            document.getElementById('amountValue').innerText = '₹' + amount.toLocaleString();
+            document.getElementById('rateValue').innerText = rate + '%';
+            document.getElementById('tenureValue').innerText = tenure + ' Years';
+            
+            const monthlyRate = rate / (12 * 100);
+            const months = tenure * 12;
+            const emi = amount * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+            const totalPayment = emi * months;
+            const totalInterest = totalPayment - amount;
+            
+            document.getElementById('emiAmount').innerHTML = '₹' + Math.round(emi).toLocaleString();
+            document.getElementById('totalInterest').innerHTML = '₹' + Math.round(totalInterest).toLocaleString();
+            document.getElementById('totalPayment').innerHTML = '₹' + Math.round(totalPayment).toLocaleString();
+        }
+        
+        amountSlider.addEventListener('input', updateEMI);
+        rateSlider.addEventListener('input', updateEMI);
+        tenureSlider.addEventListener('input', updateEMI);
+        
+        updateEMI();
+    </script>
+</body>
+</html>
