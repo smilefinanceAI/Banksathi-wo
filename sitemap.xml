@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Pages -->
+    <url><loc>https://yourdomain.com/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>
+    
+    <!-- Loan Pages -->
+    <url><loc>https://yourdomain.com/personal-loan/</loc><priority>0.9</priority></url>
+    <url><loc>https://yourdomain.com/home-loan/</loc><priority>0.9</priority></url>
+    <url><loc>https://yourdomain.com/business-loan/</loc><priority>0.9</priority></url>
+    <url><loc>https://yourdomain.com/gold-loan/</loc><priority>0.8</priority></url>
+    <url><loc>https://yourdomain.com/education-loan/</loc><priority>0.8</priority></url>
+    <url><loc>https://yourdomain.com/car-loan/</loc><priority>0.8</priority></url>
+    <url><loc>https://yourdomain.com/loan-against-property/</loc><priority>0.8</priority></url>
+    
+    <!-- Credit Card Pages -->
+    <url><loc>https://yourdomain.com/credit-card/</loc><priority>0.9</priority></url>
+    <url><loc>https://yourdomain.com/credit-card/hdfc-cards.html</loc><priority>0.7</priority></url>
+    <url><loc>https://yourdomain.com/credit-card/sbi-cards.html</loc><priority>0.7</priority></url>
+    <url><loc>https://yourdomain.com/credit-card/lifetime-free.html</loc><priority>0.7</priority></url>
+    
+    <!-- Investment Pages -->
+    <url><loc>https://yourdomain.com/demat-account/</loc><priority>0.8</priority></url>
+    <url><loc>https://yourdomain.com/saving-account/</loc><priority>0.8</priority></url>
+    <url><loc>https://yourdomain.com/fixed-deposit/</loc><priority>0.8</priority></url>
+    
+    <!-- Insurance Pages -->
+    <url><loc>https://yourdomain.com/insurance/term-insurance/</loc><priority>0.8</priority></url>
+    <url><loc>https://yourdomain.com/insurance/health-insurance/</loc><priority>0.8</priority></url>
+    
+    <!-- Calculator Pages -->
+    <url><loc>https://yourdomain.com/calculators/emi-calculator.html</loc><priority>0.7</priority></url>
+    <url><loc>https://yourdomain.com/calculators/loan-eligibility.html</loc><priority>0.7</priority></url>
+    
+    <!-- Personal Loan Subpages -->
+    <url><loc>https://yourdomain.com/personal-loan/eligibility.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/personal-loan/interest-rates.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/personal-loan/emi-calculator.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/personal-loan/documents.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/personal-loan/low-cibil.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/personal-loan/instant-approval.html</loc><priority>0.6</priority></url>
+    
+    <!-- Home Loan Subpages -->
+    <url><loc>https://yourdomain.com/home-loan/eligibility.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/home-loan/interest-rates.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/home-loan/emi-calculator.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/home-loan/tax-benefits.html</loc><priority>0.6</priority></url>
+    <url><loc>https://yourdomain.com/home-loan/nri-home-loan.html</loc><priority>0.6</priority></url>
+</urlset>
