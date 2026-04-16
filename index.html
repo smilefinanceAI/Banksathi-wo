@@ -3,542 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bankasthi - Best Loans & Financial Products in India</title>
-    <meta name="description" content="Compare personal loan, home loan, credit card, demat account. Get best offers from 50+ banks. Pan India service.">
-    <meta name="keywords" content="personal loan, home loan, credit card, demat account, savings account, loan India, Bankasthi">
-    <meta name="author" content="Bankasthi">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        /* Header */
-        .header {
-            background: rgba(255,255,255,0.95);
-            padding: 15px 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #666;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-        }
-
-        /* Hero Section */
-        .hero {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-
-        /* Contact Bar */
-        .contact-bar {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            padding: 15px;
-            border-radius: 50px;
-            display: inline-flex;
-            gap: 30px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .contact-bar span {
-            font-size: 16px;
-        }
-
-        .call-btn, .whatsapp-btn {
-            padding: 8px 20px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .call-btn {
-            background: #28a745;
-            color: white;
-        }
-
-        .whatsapp-btn {
-            background: #25D366;
-            color: white;
-        }
-
-        /* Search Box */
-        .search-container {
-            max-width: 600px;
-            margin: 30px auto;
-        }
-
-        .search-box {
-            display: flex;
-            background: white;
-            border-radius: 60px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .search-box input {
-            flex: 1;
-            padding: 16px 24px;
-            font-size: 16px;
-            border: none;
-            outline: none;
-        }
-
-        .search-box button {
-            padding: 16px 32px;
-            background: #ff6b35;
-            color: white;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Products Grid */
-        .products-section {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            color: white;
-            margin-bottom: 40px;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .product-icon {
-            font-size: 50px;
-            margin-bottom: 15px;
-        }
-
-        .product-card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .product-card p {
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .interest {
-            color: #ff6b35;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        .apply-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            margin-top: 15px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        /* Cities Section */
-        .cities-section {
-            background: white;
-            padding: 60px 20px;
-            margin-top: 60px;
-        }
-
-        .cities-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-        }
-
-        .city-btn {
-            padding: 12px;
-            background: #f0f0f0;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-
-        .city-btn:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        /* Features */
-        .features {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .feature {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .feature span {
-            font-size: 40px;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1a1a2e;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-            .search-box {
-                flex-direction: column;
-                border-radius: 20px;
-            }
-            .contact-bar {
-                border-radius: 20px;
-            }
-            .nav-links {
-                margin-top: 10px;
-            }
-        }
-    </style>
+    <title>BankSathi - India's Largest Financial Products Platform | Loans, Credit Cards, Demat & More</title>
+    <meta name="description" content="Compare and apply for personal loan, home loan, business loan, credit card, demat account, savings account, insurance, fixed deposit. Get best offers from 50+ banks. Instant approval.">
+    <meta name="keywords" content="personal loan, home loan, business loan, credit card, demat account, savings account, fixed deposit, insurance, loan India, BankSathi">
+    <meta name="author" content="BankSathi">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/favicon.ico">
 </head>
 <body>
 
     <!-- Header -->
-    <div class="header">
-        <div class="nav">
-            <div class="logo">🏦 Bankasthi</div>
+    <header class="header">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span>🏦</span> BankSathi
+            </a>
+            
             <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#" onclick="scrollToProducts()">Products</a>
-                <a href="#" onclick="scrollToCities()">Cities</a>
-                <a href="#">Contact</a>
+                <a href="/">Home</a>
+                
+                <div class="dropdown">
+                    <a href="#">Loans ▼</a>
+                    <div class="dropdown-content">
+                        <a href="/personal-loan/">Personal Loan</a>
+                        <a href="/home-loan/">Home Loan</a>
+                        <a href="/business-loan/">Business Loan</a>
+                        <a href="/gold-loan/">Gold Loan</a>
+                        <a href="/education-loan/">Education Loan</a>
+                        <a href="/car-loan/">Car Loan</a>
+                        <a href="/two-wheeler-loan/">Two Wheeler Loan</a>
+                        <a href="/loan-against-property/">Loan Against Property</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="#">Credit Cards ▼</a>
+                    <div class="dropdown-content">
+                        <a href="/credit-card/">All Credit Cards</a>
+                        <a href="/credit-card/lifetime-free.html">Lifetime Free Cards</a>
+                        <a href="/credit-card/travel-cards.html">Travel Cards</a>
+                        <a href="/credit-card/fuel-cards.html">Fuel Cards</a>
+                        <a href="/credit-card/shopping-cards.html">Shopping Cards</a>
+                        <a href="/credit-card/lounge-access.html">Lounge Access</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="#">Investments ▼</a>
+                    <div class="dropdown-content">
+                        <a href="/demat-account/">Demat Account</a>
+                        <a href="/fixed-deposit/">Fixed Deposit</a>
+                        <a href="/saving-account/">Savings Account</a>
+                        <a href="/mutual-funds/">Mutual Funds</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="#">Insurance ▼</a>
+                    <div class="dropdown-content">
+                        <a href="/insurance/term-insurance/">Term Insurance</a>
+                        <a href="/insurance/health-insurance/">Health Insurance</a>
+                        <a href="/insurance/car-insurance/">Car Insurance</a>
+                        <a href="/insurance/bike-insurance/">Bike Insurance</a>
+                    </div>
+                </div>
+                
+                <a href="/calculators/">Calculators</a>
+                <a href="/blog/">Blog</a>
             </div>
+            
+            <a href="tel:9773747761" class="contact-btn">📞 Call Now</a>
         </div>
-    </div>
+    </header>
 
     <!-- Hero Section -->
-    <div class="hero">
-        <h1>Find Best Loans & Financial Products<br>Across India 🇮🇳</h1>
-        <p>Compare Personal Loan, Home Loan, Credit Card, Demat Account | 50+ Banks</p>
+    <section class="hero">
+        <h1>Find Best Financial Products in India 🇮🇳</h1>
+        <p>Compare & Apply for Loans, Credit Cards, Demat, Insurance & More from 50+ Banks</p>
         
-        <!-- Contact Info -->
-        <div class="contact-bar">
-            <span>📞 Adviser Code: <strong>110037218</strong></span>
-            <button class="call-btn" onclick="makeCall()">📞 Call Now: 9773747761</button>
-            <button class="whatsapp-btn" onclick="sendWhatsApp()">💬 WhatsApp Now</button>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search: personal loan 50000, best credit card, demat account...">
+            <button onclick="searchProducts()">Search →</button>
         </div>
-        
-        <!-- Search Box -->
-        <div class="search-container">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search: personal loan 50000, credit card, demat account...">
-                <button onclick="handleSearch()">Search →</button>
-            </div>
-        </div>
-    </div>
+    </section>
 
-    <!-- Products Section -->
-    <div class="products-section" id="products">
-        <h2 class="section-title">Our Financial Products</h2>
-        <div class="products-grid">
-            
-            <div class="product-card" onclick="redirectToBankSathi('personal-loan')">
-                <div class="product-icon">💰</div>
-                <h3>Personal Loan</h3>
-                <p>Up to ₹40 Lakhs</p>
-                <div class="interest">Interest: 10.5% onwards</div>
-                <button class="apply-btn">Apply Now →</button>
-            </div>
-            
-            <div class="product-card" onclick="redirectToBankSathi('home-loan')">
-                <div class="product-icon">🏠</div>
-                <h3>Home Loan</h3>
-                <p>Up to ₹5 Crore</p>
-                <div class="interest">Interest: 8.5% onwards</div>
-                <button class="apply-btn">Apply Now →</button>
-            </div>
-            
-            <div class="product-card" onclick="redirectToBankSathi('business-loan')">
-                <div class="product-icon">💼</div>
-                <h3>Business Loan</h3>
-                <p>Up to ₹2 Crore</p>
-                <div class="interest">Interest: 12% onwards</div>
-                <button class="apply-btn">Apply Now →</button>
-            </div>
-            
-            <div class="product-card" onclick="redirectToBankSathi('credit-card')">
-                <div class="product-icon">💳</div>
-                <h3>Credit Card</h3>
-                <p>Zero Annual Fee</p>
-                <div class="interest">5% Cashback + Rewards</div>
-                <button class="apply-btn">Apply Now →</button>
-            </div>
-            
-            <div class="product-card" onclick="redirectToBankSathi('demat')">
-                <div class="product-icon">📈</div>
-                <h3>Demat Account</h3>
-                <p>Zero AMC</p>
-                <div class="interest">Free Trading Account</div>
-                <button class="apply-btn">Open Now →</button>
-            </div>
-            
-            <div class="product-card" onclick="redirectToBankSathi('savings')">
-                <div class="product-icon">💰</div>
-                <h3>Savings Account</h3>
-                <p>Zero Balance</p>
-                <div class="interest">Interest: 4% onwards</div>
-                <button class="apply-btn">Open Now →</button>
-            </div>
-            
-            <div class="product-card" onclick="redirectToBankSathi('gold-loan')">
-                <div class="product-icon">✨</div>
-                <h3>Gold Loan</h3>
-                <p>Up to ₹50 Lakhs</p>
-                <div class="interest">Interest: 9% onwards</div>
-                <button class="apply-btn">Apply Now →</button>
-            </div>
-            
-            <div class="product-card" onclick="redirectToBankSathi('insurance')">
-                <div class="product-icon">🛡️</div>
-                <h3>Insurance</h3>
-                <p>Term, Health, Car</p>
-                <div class="interest">Starting ₹500/month</div>
-                <button class="apply-btn">Get Quote →</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cities Section -->
-    <div class="cities-section" id="cities">
-        <h2 class="section-title" style="color: #333;">Pan India Services</h2>
-        <div class="cities-grid" id="citiesGrid"></div>
-    </div>
-
-    <!-- Features -->
-    <div class="features">
-        <div class="feature">
-            <span>⚡</span>
-            <h3>5 Minute Approval</h3>
-            <p>Quick processing with minimal documents</p>
-        </div>
-        <div class="feature">
-            <span>🔒</span>
-            <h3>100% Secure</h3>
-            <p>Your data is encrypted & safe</p>
-        </div>
-        <div class="feature">
-            <span>🎯</span>
-            <h3>Best Offers</h3>
-            <p>Lowest interest rates guaranteed</p>
-        </div>
-        <div class="feature">
-            <span>📞</span>
-            <h3>Free Expert Advice</h3>
-            <p>Call us anytime for help</p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <p>© 2024 Bankasthi | Compare Loans & Financial Products Across India</p>
-        <p style="margin-top: 10px; opacity: 0.7;">Adviser Code: 110037218 | Contact: 9773747761</p>
-        <p style="margin-top: 10px; font-size: 12px;">*Terms & Conditions Apply. Interest rates may vary based on CIBIL score.</p>
-    </div>
-
-    <script>
-        // BankSathi Redirect with Adviser Code
-        const ADVISER_CODE = "110037218";
-        const CONTACT = "9773747761";
+    <!-- Main Categories -->
+    <div class="category-grid">
+        <a href="/personal-loan/" class="category-card">
+            <div class="category-icon">💰</div>
+            <h3>Personal Loan</h3>
+            <p>Up to ₹40 Lakhs • 10.5% Interest</p>
+            <span class="interest-badge">Instant Approval</span>
+        </a>
         
-        function redirectToBankSathi(product) {
-            const urls = {
-                'personal-loan': `https://banksathi.com/personal-loan?ref=${ADVISER_CODE}`,
-                'home-loan': `https://banksathi.com/home-loan?ref=${ADVISER_CODE}`,
-                'business-loan': `https://banksathi.com/business-loan?ref=${ADVISER_CODE}`,
-                'credit-card': `https://banksathi.com/credit-card?ref=${ADVISER_CODE}`,
-                'demat': `https://banksathi.com/demat-account?ref=${ADVISER_CODE}`,
-                'savings': `https://banksathi.com/savings-account?ref=${ADVISER_CODE}`,
-                'gold-loan': `https://banksathi.com/gold-loan?ref=${ADVISER_CODE}`,
-                'insurance': `https://banksathi.com/insurance?ref=${ADVISER_CODE}`
-            };
-            
-            const url = urls[product] || `https://banksathi.com/search?q=${product}&ref=${ADVISER_CODE}`;
-            window.open(url, '_blank');
-            
-            // Track click (local analytics)
-            trackClick(product);
-        }
+        <a href="/home-loan/" class="category-card">
+            <div class="category-icon">🏠</div>
+            <h3>Home Loan</h3>
+            <p>Up to ₹5 Crore • 8.5% Interest</p>
+            <span class="interest-badge">Tax Benefits</span>
+        </a>
         
-        function handleSearch() {
-            const query = document.getElementById('searchInput').value;
-            if (query.trim()) {
-                const url = `https://banksathi.com/search?q=${encodeURIComponent(query)}&ref=${ADVISER_CODE}`;
-                window.open(url, '_blank');
-                trackSearch(query);
-            } else {
-                alert('Please enter what you are looking for!');
-            }
-        }
+        <a href="/business-loan/" class="category-card">
+            <div class="category-icon">💼</div>
+            <h3>Business Loan</h3>
+            <p>Up to ₹2 Crore • 12% Interest</p>
+            <span class="interest-badge">No Collateral</span>
+        </a>
         
-        function makeCall() {
-            window.location.href = `tel:${CONTACT}`;
-        }
+        <a href="/credit-card/" class="category-card">
+            <div class="category-icon">💳</div>
+            <h3>Credit Card</h3>
+            <p>Zero Annual Fee • 5% Cashback</p>
+            <span class="interest-badge">Lifetime Free</span>
+        </a>
         
-        function sendWhatsApp() {
-            window.open(`https://wa.me/${CONTACT}?text=Hi, I need financial product advice. My adviser code is ${ADVISER_CODE}`, '_blank');
-        }
+        <a href="/demat-account/" class="category-card">
+            <div class="category-icon">📈</div>
+            <h3>Demat Account</h3>
+            <p>Zero AMC • Free Trading</p>
+            <span class="interest-badge">Open Free</span>
+        </a>
         
-        // Cities Data
-        const cities = [
-            "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Chennai", 
-            "Kolkata", "Pune", "Ahmedabad", "Jaipur", "Lucknow",
-            "Kanpur", "Nagpur", "Indore", "Bhopal", "Patna",
-            "Surat", "Vadodara", "Chandigarh", "Bhubaneswar", "Ranchi"
-        ];
-        
-        // Load cities
-        const citiesGrid = document.getElementById('citiesGrid');
-        cities.forEach(city => {
-            const btn = document.createElement('button');
-            btn.className = 'city-btn';
-            btn.textContent = city;
-            btn.onclick = () => {
-                const url = `https://banksathi.com/search?q=loan%20in%20${city}&ref=${ADVISER_CODE}`;
-                window.open(url, '_blank');
-            };
-            citiesGrid.appendChild(btn);
-        });
-        
-        // Analytics (local storage)
-        function trackClick(product) {
-            let clicks = JSON.parse(localStorage.getItem('bankasthi_clicks') || '{}');
-            clicks[product] = (clicks[product] || 0) + 1;
-            clicks.total = (clicks.total || 0) + 1;
-            clicks.last = new Date().toISOString();
-            localStorage.setItem('bankasthi_clicks', JSON.stringify(clicks));
-            console.log('Tracked:', product, 'Total:', clicks.total);
-        }
-        
-        function trackSearch(query) {
-            let searches = JSON.parse(localStorage.getItem('bankasthi_searches') || '[]');
-            searches.push({ query: query, time: new Date().toISOString() });
-            if (searches.length > 100) searches = searches.slice(-100);
-            localStorage.setItem('bankasthi_searches', JSON.stringify(searches));
-        }
-        
-        function scrollToProducts() {
-            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        function scrollToCities() {
-            document.getElementById('cities').scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // Show analytics in console
-        function showAnalytics() {
-            const clicks = JSON.parse(localStorage.getItem('bankasthi_clicks') || '{}');
-            const searches = JSON.parse(localStorage.getItem('bankasthi_searches') || '[]');
-            console.log('=== Bankasthi Analytics ===');
-            console.log('Total Clicks:', clicks.total || 0);
-            console.log('Last 5 searches:', searches.slice(-5));
-        }
-        
-        console.log('Bankasthi Platform Ready! Call showAnalytics() to see stats');
-    </script>
-</body>
-</html>
+        <a href="/saving-account/" class="category-card">
+            <div class="category-icon">🏦</div>
+            <h3>Savings Account</h3>
+            <p>Zero Balance • 4% Interest</p>
